@@ -8,7 +8,7 @@ const SPECS = [
   ['formats', 'Formats'],
   ['fm', 'FM radio'],
   ['software', 'Software'],
-  ['firmware', 'Firmware'],
+  ['firmware', 'Latest firmware'],
   ['size', 'Size (mm)'],
   ['weight', 'Weight'],
 ];
@@ -64,7 +64,7 @@ document.getElementById('rows').innerHTML = SERIES.map((s) => `
     </th>
     <td>${esc(s.released)}${s.region ? `<br><small>${esc(s.region)}</small>` : ''}</td>
     <td class="models">${s.models.map(([m, cap]) => `<span>${esc(m)} <small>${esc(cap)}</small></span>`).join('')}</td>
-    ${SPECS.slice(1).map(([k]) => `<td>${esc(s[k] || '—')}</td>`).join('')}
+    ${SPECS.slice(1).map(([k]) => `<td class="${k}">${esc(s[k] || '—')}</td>`).join('')}
   </tr>`).join('');
 
 // Carousels: keep the counter, dots and caption in sync with the swiped-to photo

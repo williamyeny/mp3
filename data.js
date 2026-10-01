@@ -5,6 +5,7 @@ const SERIES = [
     models: [['NW-E393', '4 GB'], ['NW-E394', '8 GB'], ['NW-E395', '16 GB']],
     screen: '1.77" color LCD, 128 × 160', battery: '35 h', port: 'Micro-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '92 × 43 × 10', weight: '39 g',
+    software: 'None needed (drag and drop). Sony offers Music Center for PC (formerly Media Go).', firmware: 'Ver. 1.01',
     notes: 'The last E Series Walkman, with a flatter rectangular body, micro-USB charging, 35 hours of music playback, and side volume buttons and a hold switch again. It dropped video and plays only MP3, WMA, AAC and WAV (no FLAC). Sony was still selling it in 2024.',
     colors: ['black', 'red', 'blue'],
     images: [
@@ -21,6 +22,7 @@ const SERIES = [
     models: [['NW-E083', '4 GB']],
     screen: '2" color LCD, 240 × 320', battery: '36 h (30 h with noise cancelling)', port: 'WM-PORT',
     formats: 'ATRAC, ATRAC Lossless, MP3, WMA, AAC, WAV, FLAC, Apple Lossless', fm: 'Yes', size: '92.1 × 42.1 × 8', weight: '46 g',
+    software: 'None needed (drag and drop). Media Go or x-APPLICATION (Windows), Content Transfer (Mac).', firmware: 'Ver. 1.02',
     notes: 'A larger, thinner body with a 2-inch screen that looks much like the NW-S780 sold at the same time, but with only 4 GB and three colors. It kept noise cancelling and added FLAC and Apple Lossless playback plus language-study tools such as slower playback and A-B repeat.',
     colors: ['red', 'black', 'blue'],
     images: [
@@ -37,6 +39,7 @@ const SERIES = [
     models: [['NWZ-E583', '4 GB'], ['NWZ-E584', '8 GB'], ['NWZ-E585', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '62–77 h audio, 13–14 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, HE-AAC, Apple Lossless, WAV, FLAC', fm: 'Yes', size: '92 × 41.7 × 7.5', weight: '49 g',
+    software: 'None needed (drag and drop). Media Go (Windows) and Content Transfer (Mac) came on the player.', firmware: 'Ver. 1.02',
     notes: 'The first E Series Walkman that plays FLAC (and Apple Lossless) files, with digital noise cancelling through the bundled earbuds, a built-in voice recorder and up to 77 hours of music on a charge. Sony\'s European and Canadian stores sold it only in black.',
     colors: ['black'],
     images: [
@@ -52,6 +55,7 @@ const SERIES = [
     models: [['NWZ-E383', '4 GB'], ['NWZ-E384', '8 GB'], ['NWZ-E385', '16 GB']],
     screen: '1.77" color LCD, 128 × 160', battery: '30 h audio, 4 h video', port: 'Mini-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '87.7 × 43.4 × 9.9', weight: '52 g',
+    software: 'None needed (drag and drop). Media Go (Windows) and Content Transfer (Mac) came on the player.',
     notes: 'A cheaper, smaller sibling of the E580 with a 1.77-inch screen, 30 hours of music playback and a mini-USB port instead of the WM-PORT. It plays WMV video only and has no FLAC or noise cancelling; there are no separate volume keys or hold switch (volume is on the round button, and hold is a long press of the OPTION/PWR/HOLD button).',
     colors: ['black', 'red', 'blue', 'pink'],
     images: [
@@ -66,6 +70,7 @@ const SERIES = [
     models: [['NWZ-E473', '4 GB'], ['NWZ-E474', '8 GB'], ['NWZ-E475', '16 GB'], ['NWZ-E573', '4 GB'], ['NWZ-E574', '8 GB'], ['NWZ-E575', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '30–36 h audio, 5–6 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '97.2 × 43.3 × 7.4', weight: '51 g',
+    software: 'None needed (drag and drop). Media Go came on the player.',
     notes: '', colors: [], images: [],
   },
   {
@@ -73,6 +78,7 @@ const SERIES = [
     models: [['NWZ-E373', '4 GB'], ['NWZ-E374', '8 GB'], ['NWZ-E375', '16 GB']],
     screen: '1.77" color LCD, 128 × 160', battery: '30 h audio, 4 h video', port: 'Mini-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '87.7 × 43.4 × 9.9', weight: '52 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player.',
     notes: '', colors: [], images: [],
   },
   {
@@ -80,6 +86,7 @@ const SERIES = [
     models: [['NW-E062', '2 GB'], ['NW-E063', '4 GB']],
     screen: '1.4" color LCD, 128 × 160', battery: '30 h (24 h with noise cancelling)', port: 'WM-PORT',
     formats: 'ATRAC, ATRAC Lossless, MP3, WMA, AAC, WAV', fm: 'Yes', size: '77.5 × 35.5 × 9.35', weight: '37 g',
+    software: 'x-APPLICATION (came on the player) for ATRAC and store purchases; drag and drop works for MP3, WMA and AAC.',
     notes: 'Nearly the same shape as the E050 but thinner and lighter, and the first E Series player with digital noise cancelling (the included earbuds have small microphones built in). The K models came with a matching speaker, not different earbuds.',
     colors: ['pink', 'blue', 'red', 'black'],
     images: [
@@ -96,6 +103,7 @@ const SERIES = [
     models: [['NWZ-E363', '4 GB'], ['NWZ-E364', '8 GB'], ['NWZ-E365', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '30 h audio, 4 h video', port: 'Mini-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '87.5 × 45 × 9.9', weight: '55 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player.',
     notes: '', colors: [], images: [],
   },
   {
@@ -103,6 +111,7 @@ const SERIES = [
     models: [['NWZ-E463', '4 GB'], ['NWZ-E464', '8 GB'], ['NWZ-E465', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '50 h audio, 10 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '96.8 × 45 × 10', weight: '58 g',
+    software: 'None needed (drag and drop). Media Go came on the player.',
     notes: '', colors: [], images: [],
   },
   {
@@ -110,6 +119,7 @@ const SERIES = [
     models: [['NW-E052', '2 GB'], ['NW-E053', '4 GB']],
     screen: '1.4" color LCD, 128 × 160', battery: '30 h', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV (+ATRAC and ATRAC Lossless in Japan)', fm: 'Yes', size: '77 × 35.5 × 10.3', weight: '43 g',
+    software: 'None needed (drag and drop). x-APPLICATION (Japan) or Content Transfer came on the player.',
     notes: 'The E Series switched from a USB stick to a small flat player with a 1.4-inch color screen and Sony\'s WM-PORT cable connector. In Japan it was also sold with a matching cone-shaped speaker stand (NW-E050K).',
     colors: ['blue', 'pink', 'silver', 'black'],
     images: [
@@ -126,6 +136,7 @@ const SERIES = [
     models: [['NWZ-E353', '4 GB'], ['NWZ-E354', '8 GB'], ['NWZ-E355', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '50 h audio, 10 h video', port: 'Mini-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '94.7 × 44 × 9.7', weight: '58 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player.',
     notes: 'A cheaper version of the E450, sold mainly in the US and parts of Asia. It keeps the 50-hour battery, SensMe channels, lyrics display and karaoke mode, but has no voice recording, plays only WMV video, and uses a standard mini-USB port instead of WM-PORT.',
     colors: ['black', 'red', 'blue'],
     images: [
@@ -140,6 +151,7 @@ const SERIES = [
     models: [['NWZ-E453', '4 GB'], ['NWZ-E454', '8 GB'], ['NWZ-E455', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '50 h audio, 10 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '94.7 × 44 × 9.7', weight: '58 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player; Media Go also works.',
     notes: 'The 2010 model that added karaoke mode (it turns down the singer\'s voice), scrolling lyrics from .lrc files and SensMe mood channels. Sony rated it at 50 hours of music per charge; it kept WM-PORT and voice recording but dropped FM radio recording. Gold was sold in India only.',
     colors: ['black', 'red', 'blue', 'pink', 'green', 'gold'],
     images: [
@@ -156,6 +168,7 @@ const SERIES = [
     models: [['NWZ-E343', '4 GB'], ['NWZ-E344', '8 GB'], ['NWZ-E345', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '30 h audio, 4 h video', port: 'Mini-USB',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '87.3 × 44 × 9.3', weight: '54 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player.', firmware: 'Ver. 1.01',
     notes: 'A cheaper version of the E440, sold mainly in North America, that looks the same from the front. It has no voice or FM recording, plays only WMV video, and uses a standard mini-USB port instead of Sony\'s WM-PORT.',
     colors: ['black', 'red'],
     images: [
@@ -171,6 +184,7 @@ const SERIES = [
     models: [['NWZ-E443', '4 GB'], ['NWZ-E444', '8 GB'], ['NWZ-E445', '16 GB']],
     screen: '2" color LCD, 240 × 320', battery: '30 h audio, 4–6 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '86.8 × 44 × 9.3', weight: '54 g',
+    software: 'None needed (drag and drop). Content Transfer came on the player.', firmware: 'Ver. 1.01',
     notes: 'The 2009 follow-up to the E430: a little larger, with a silver ring around the controls and a two-tone front on the colored models. It added voice recording and FM radio recording, and some markets also sold it bundled with a matching speaker dock as the NWZ-E443K.',
     colors: ['black', 'red', 'pink'],
     images: [
@@ -187,6 +201,7 @@ const SERIES = [
     models: [['NW-E042', '2 GB'], ['NW-E043', '4 GB'], ['NW-E044', '8 GB']],
     screen: '3-line color LCD', battery: '28–30 h', port: 'Built-in USB plug',
     formats: 'ATRAC, MP3, WMA, AAC, WAV', fm: 'Yes', size: '84.9 × 22.4 × 16.9', weight: '28 g',
+    software: 'SonicStage V (required, came on the player), later x-APPLICATION. Windows only.',
     notes: 'The last stick-shaped E Series player, with a rounder body and the same swappable front panels as the E020 (two in the box, ten more sold separately). The music software came stored on the player itself instead of on a CD.',
     colors: ['mint green and pink', 'hot pink and purple', 'silver and white', 'gold and black', 'blue and orange'],
     images: [
@@ -203,6 +218,7 @@ const SERIES = [
     models: [['NWZ-E435F', '2 GB'], ['NWZ-E436F', '4 GB'], ['NWZ-E438F', '8 GB']],
     screen: '2" color LCD, 240 × 320', battery: '45 h audio, 8 h video', port: 'WM-PORT',
     formats: 'MP3, WMA, AAC, WAV', fm: 'Yes', size: '83.9 × 44 × 8.5', weight: '50 g',
+    software: 'None needed (drag and drop). Came with Windows Media Player 11 and Content Transfer.', firmware: 'Ver. 1.02',
     notes: 'The first of the slim E Series players with a 2-inch color screen and video playback, replacing the older stick-shaped E Series outside Japan. It used Sony\'s WM-PORT connector and Sony rated it at about 45 hours of music per charge.',
     colors: ['black', 'red', 'pink', 'blue'],
     images: [
@@ -218,6 +234,7 @@ const SERIES = [
     models: [['NW-E023F', '1 GB'], ['NW-E025F', '2 GB'], ['NW-E026F', '4 GB']],
     screen: '3-line color LCD', battery: '28–30 h', port: 'Built-in USB plug',
     formats: 'MP3, WMA, AAC (+ATRAC, WAV in Japan)', fm: 'Yes', size: '83.7 × 22.3 × 16.2', weight: '28 g',
+    software: 'Japan: SonicStage CP. Elsewhere (NWD models): drag and drop, no software needed.',
     notes: 'Still a USB stick, but the front panel and USB cap slide off and can be swapped. Each player came with two panels (so each color is really a pair), Sony sold 10 more designs, and unlike the E010 the Japanese models have FM radio.',
     colors: ['white and gold', 'black and silver', 'pink and light pink', 'blue and green', 'red and indigo'],
     images: [
@@ -234,6 +251,7 @@ const SERIES = [
     models: [['NW-E013 / E013F', '1 GB'], ['NW-E015 / E015F', '2 GB'], ['NW-E016 / E016F', '4 GB']],
     screen: '3-line color LCD', battery: '30 h', port: 'Built-in USB plug',
     formats: 'ATRAC, MP3, WMA, AAC, WAV', fm: 'F models only (not sold in Japan)', size: '83.1 × 22.8 × 14.2', weight: '29 g',
+    software: 'SonicStage CP (required, no drag and drop). Windows only.',
     notes: 'A USB-stick player: pull off the cap and it plugs straight into a computer, no cable needed. It replaced the one-color OLED screen of the earlier NW-E000 with a small color LCD that can show album art; the Japanese models (NW-E013/E015/E016) have no FM radio, while the F models sold in other countries do.',
     colors: ['black', 'violet', 'pink', 'blue', 'gold'],
     images: [
@@ -250,6 +268,7 @@ const SERIES = [
     models: [['NW-E002 / E002F', '512 MB'], ['NW-E003 / E003F', '1 GB'], ['NW-E005 / E005F', '2 GB']],
     screen: '1-line OLED', battery: '28 h', port: 'Built-in USB plug',
     formats: 'ATRAC, MP3, WMA (+AAC in Japan)', fm: 'F models only', size: '79 × 24.8 × 13.6', weight: '25 g',
+    software: 'SonicStage (required, no drag and drop). Windows only.', firmware: 'Ver. 2.01',
     notes: 'A small stick with a USB plug built into one end under a cap, so it plugs straight into a computer to load music and charge. It has a one-line OLED screen, a 3-minute charge gives about 3 hours of play, and the Japanese models were the first E Series players to play AAC files.',
     colors: ['black', 'violet', 'pink', 'blue', 'lime green', 'silver'],
     images: [
@@ -266,6 +285,7 @@ const SERIES = [
     models: [['NW-E205', '512 MB'], ['NW-E207', '1 GB'], ['NW-E303', '256 MB'], ['NW-E305', '512 MB'], ['NW-E307', '1 GB']],
     screen: '1-line OLED', battery: '50 h', port: 'Pop-out USB plug',
     formats: 'ATRAC, MP3', fm: 'E300 only', size: '68.2 × 39 × 24.1', weight: '45 g',
+    software: 'SonicStage 3.2 (required). Windows only.',
     notes: 'Shaped like a jelly bean and made to be used with one hand, with a left-hand mode that flips the screen and buttons. Sliding a cover makes a USB plug pop out, so it can go straight into a computer without a cable; the colors were named after jelly bean flavors.',
     colors: ['white', 'blue', 'pink', 'black'],
     images: [
@@ -282,6 +302,7 @@ const SERIES = [
     models: [['NW-E403', '256 MB'], ['NW-E405', '512 MB'], ['NW-E407', '1 GB'], ['NW-E503', '256 MB'], ['NW-E505', '512 MB'], ['NW-E507', '1 GB']],
     screen: '3-line OLED', battery: '50 h', port: 'Mini-USB',
     formats: 'ATRAC, MP3', fm: 'E500 only', size: '84.9 × 28.8 × 13.9', weight: '47 g',
+    software: 'SonicStage 3 (required); MP3 File Manager added later. Windows only.', firmware: 'Ver. 2.00',
     notes: 'A slim stick with a mirror-like clear shell (Sony said the design idea was a perfume bottle), a 3-line OLED screen and a jog dial on the end. Its battery could get about 3 hours of play from a 3-minute charge; the E500 models add an FM radio.',
     colors: ['black', 'blue', 'red', 'green', 'silver', 'pink', 'gold'],
     images: [
@@ -298,6 +319,7 @@ const SERIES = [
     models: [['NW-E103', '256 MB'], ['NW-E105', '512 MB'], ['NW-E107', '1 GB']],
     screen: '1-line LCD', battery: '70 h on one AAA', port: 'USB cable',
     formats: 'ATRAC, MP3', fm: 'No', size: '56.2 × 56.2 × 19.2', weight: '37 g with battery',
+    software: 'SonicStage 3 (required); MP3 File Manager added later. Windows only.',
     notes: 'A round player about the size of a cookie that runs on one AAA battery instead of a built-in rechargeable one, good for about 70 hours. It was Sony\'s low-cost answer to the iPod shuffle, with a small backlit LCD and big press-down keys built into the front panel.',
     colors: ['silver', 'blue', 'red', 'orange', 'white'],
     images: [
@@ -313,6 +335,7 @@ const SERIES = [
     models: [['NW-E53', '128 MB'], ['NW-E55', '128 MB'], ['NW-E73', '256 MB'], ['NW-E75', '256 MB'], ['NW-E95', '512 MB'], ['NW-E99', '1 GB']],
     screen: '1-line LCD', battery: '70 h on one AAA', port: 'Mini-USB',
     formats: 'ATRAC (MP3 on the E99 and European E95)', fm: 'No', size: '56 × 37.3 × 15', weight: '51 g with battery',
+    software: 'SonicStage 2 (required); MP3 File Manager for MP3s. Windows only.',
     notes: 'A small square player with a jog dial on one corner that runs about 70 hours on one AAA battery. Every model in this group uses the same body, so the NW-E95 and NW-E99 look like the NW-E75 apart from color; MP3 support arrived late in 2004 with the NW-E99, the European NW-E95, and a free update for European NW-E55/E75 owners.',
     colors: ['silver', 'blue', 'red', 'white', 'black'],
     images: [
@@ -329,6 +352,7 @@ const SERIES = [
     models: [['NW-E7', '64 MB'], ['NW-E10', '128 MB']],
     screen: 'Small round LCD (no song titles)', battery: '11 h (rechargeable)', port: 'USB charging cradle',
     formats: 'ATRAC, MP3', fm: 'No', size: '92.4 × 30.9 × 14.7', weight: '55 g',
+    software: 'OpenMG Jukebox 2.2 (required, even for MP3). Windows only.',
     notes: 'The first Network Walkman that could play MP3 files, though they still had to be sent through Sony\'s OpenMG Jukebox software. It moved to a built-in rechargeable battery and came with a desktop cradle that both charges it and connects it to the PC over USB. The NW-E7 came in silver or blue; the NW-E10 only in titanium gray.',
     colors: ['silver', 'blue', 'titanium gray'],
     images: [
@@ -344,6 +368,7 @@ const SERIES = [
     models: [['NW-E8P', '64 MB']],
     screen: 'LCD', battery: '7 h on one AAA', port: 'Sony USB cable',
     formats: 'ATRAC', fm: 'No', size: '75 × 70 × 30 (each earpiece)', weight: '90 g',
+    software: 'OpenMG Jukebox (required). Windows only.',
     notes: 'The whole player is built into a pair of ear-hook headphones: the right earpiece has the backlit screen and controls, and one AAA battery powers it. It has 64 MB of memory and plays only ATRAC3, like the NW-E3.',
     colors: ['titanium silver'],
     images: [
@@ -358,6 +383,7 @@ const SERIES = [
     models: [['NW-E2', '32 MB'], ['NW-E3', '64 MB'], ['NW-E5', '96 MB']],
     screen: '1-line LCD', battery: '5 h on one AAA', port: 'Sony USB cable',
     formats: 'ATRAC', fm: 'No', size: '81 × 32 × 14.6', weight: '45 g with battery',
+    software: 'OpenMG Jukebox (required). Windows only.',
     notes: 'The first Network Walkman with built-in memory, shaped like a cigarette lighter, with a shuttle switch on the end that you turn to skip and press to play. It ran on one AAA battery and only played ATRAC3 music sent from Sony\'s OpenMG Jukebox software. The NW-E5 was a limited chrome version (5,000 units in Japan), and the 32 MB NW-E2 was not sold in Japan.',
     colors: ['silver', 'blue', 'red', 'chrome'],
     images: [

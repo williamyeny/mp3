@@ -30,7 +30,7 @@ body {
 }
 
 main { max-width: 640px; margin: 0 auto; padding: 16px; }
-body.wide main { max-width: 1400px; }
+body.wide main { max-width: 1600px; }
 
 a { color: var(--link); }
 [hidden] { display: none !important; }
@@ -90,13 +90,18 @@ dl.specs dd { margin: 0; }
 
 /* table view */
 .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { border-collapse: collapse; width: 100%; min-width: 1200px; font-size: 0.85rem; }
-th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 thead th { background: var(--soft); white-space: nowrap; }
 tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 tbody th { position: sticky; left: 0; z-index: 1; background: var(--bg); white-space: nowrap; }
 tbody th a { display: block; margin-top: 2px; }
 td.models { white-space: nowrap; }
+td.screen, td.battery { min-width: 120px; }
+td.formats { min-width: 130px; }
+td.software { min-width: 190px; }
+td.port { min-width: 80px; }
+td.size { min-width: 90px; }
 td.models span { display: block; }
 td.models small { color: var(--muted); }
 .thumb { display: block; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #fff; cursor: zoom-in; overflow: hidden; }
