@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sony Walkman E Series compared</title>
+  <meta name="description" content="Photos and specs of every Sony Walkman E Series player (NW-E and NWZ-E), 2000 to 2016.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="page-head">
+      <h1>Sony Walkman E Series</h1>
+      <p class="intro">Every generation of Sony's E Series players (model numbers starting with NW-E or NWZ-E), from the first Network Walkman in 2000 to the NW-E390 from 2016, newest first. Specs can vary slightly by country.</p>
+      <nav class="views" aria-label="View">
+        <a href="#" data-view="gallery">Gallery</a>
+        <a href="#table" data-view="table">Table</a>
+      </nav>
+    </header>
+
+    <div id="gallery-view" class="feed"></div>
+
+    <div id="table-view" class="table-wrap" hidden>
+      <table>
+        <thead>
+          <tr>
+            <th>Series</th>
+            <th>Released</th>
+            <th>Models</th>
+            <th>Screen</th>
+            <th>Battery</th>
+            <th>Port</th>
+            <th>Formats</th>
+            <th>FM</th>
+            <th>Software</th>
+            <th>Firmware</th>
+            <th>Size (mm)</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Specs are from Sony's spec pages, manuals and press releases where available, otherwise from <a href="https://en.wikipedia.org/wiki/Walkman_E_Series">Wikipedia</a>. Photos belong to their owners and each one links to where it came from. Not affiliated with Sony.</p>
+    </footer>
+  </main>
+
+  <dialog id="viewer">
+    <div class="viewer">
+      <div class="viewer-img"><img alt=""></div>
+      <div class="viewer-bar">
+        <button type="button" data-step="-1" aria-label="Previous photo">&larr;</button>
+        <p></p>
+        <button type="button" data-step="1" aria-label="Next photo">&rarr;</button>
+        <button type="button" data-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
