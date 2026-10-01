@@ -14,7 +14,8 @@ const SPECS = [
 ];
 
 const bySlug = Object.fromEntries(SERIES.map((s) => [s.slug, s]));
-const src = (s, img) => `images/${s.slug}/${img.file}`;
+// Each photo comes in three sizes: th (table thumbnail), md (feed) and lg (full screen)
+const photo = (s, img, size) => `images/${s.slug}/${img.file}-${size}.webp`;
 const title = (s) => `${s.name} series` + (s.nickname ? ` (${s.nickname})` : '');
 const credit = (img) =>
   img.source ? `<a href="${esc(img.source)}" rel="noopener">${esc(img.credit)}</a>` : esc(img.credit);
@@ -32,7 +33,7 @@ document.getElementById('gallery-view').innerHTML = SERIES.map((s) => `
       <div class="slides">
         ${s.images.map((img, i) => `
           <button type="button" class="slide" data-i="${i}" aria-label="Open photo ${i + 1}">
-            <img src="${esc(src(s, img))}" alt="${esc(img.caption)}" loading="lazy">
+            <img ${s === SERIES[0] && i === 0 ? 'src' : 'data-src'}="${esc(photo(s, img, 'md'))}" alt="${esc(img.caption)}" decoding="async"${s === SERIES[0] && i === 0 ? ' fetchpriority="high"' : ''}>
           </button>`).join('')}
       </div>
       ${s.images.length > 1 ? `
@@ -58,7 +59,7 @@ document.getElementById('rows').innerHTML = SERIES.map((s) => `
   <tr>
     <th>
       ${s.images.length ? `<button type="button" class="thumb" data-series="${s.slug}" aria-label="Photos of the ${esc(s.name)} series">
-        <img src="${esc(src(s, s.images[0]))}" alt="" loading="lazy">
+        <img src="${esc(photo(s, s.images[0], 'th'))}" alt="" loading="lazy" decoding="async">
       </button>` : ''}
       <a href="#${s.slug}">${esc(s.name)}</a>
     </th>
@@ -67,8 +68,26 @@ document.getElementById('rows').innerHTML = SERIES.map((s) => `
     ${SPECS.slice(1).map(([k]) => `<td class="${k}">${esc(s[k] || '—')}</td>`).join('')}
   </tr>`).join('');
 
+// Photo loading: feed photos only load when their post is close to the screen,
+// and the next photo in a post loads ahead of time so swiping feels instant.
+document.addEventListener('load', (e) => e.target.closest?.('.slide, .thumb')?.classList.add('loaded'), true);
+document.addEventListener('error', (e) => e.target.closest?.('.slide, .thumb')?.classList.add('loaded'), true);
+
+function loadSlide(carousel, i) {
+  const img = carousel.querySelectorAll('.slide img')[i];
+  if (img && img.dataset.src && !img.getAttribute('src')) img.src = img.dataset.src;
+}
+
+const onceVisible = (margin, fn) => new IntersectionObserver((entries, obs) => {
+  for (const e of entries) if (e.isIntersecting) { fn(e.target); obs.unobserve(e.target); }
+}, { rootMargin: `${margin} 0px` });
+const nearScreen = onceVisible('300%', (c) => loadSlide(c, 0));
+const onScreen = onceVisible('0px', (c) => loadSlide(c, 1));
+
 // Carousels: keep the counter, dots and caption in sync with the swiped-to photo
 document.querySelectorAll('.carousel').forEach((c) => {
+  nearScreen.observe(c);
+  onScreen.observe(c);
   const s = bySlug[c.dataset.series];
   const slides = c.querySelector('.slides');
   const post = c.closest('.post');
@@ -77,6 +96,8 @@ document.querySelectorAll('.carousel').forEach((c) => {
     const i = Math.round(slides.scrollLeft / slides.clientWidth);
     if (i === shown || !s.images[i]) return;
     shown = i;
+    loadSlide(c, i);
+    loadSlide(c, i + 1);
     c.querySelector('.count').textContent = `${i + 1}/${s.images.length}`;
     c.querySelectorAll('.dots span').forEach((d, j) => d.classList.toggle('on', j === i));
     post.querySelector('.caption').innerHTML = captionHtml(s.images[i]);
@@ -101,10 +122,14 @@ const viewerText = viewer.querySelector('p');
 let current = null;
 let index = 0;
 
+// Shows the feed-size photo right away (usually already downloaded), then swaps in the large one
 function show(i) {
   index = (i + current.images.length) % current.images.length;
   const img = current.images[index];
-  viewerImg.src = src(current, img);
+  viewerImg.src = photo(current, img, 'md');
+  const large = new Image();
+  large.onload = () => { if (current.images[index] === img) viewerImg.src = large.src; };
+  large.src = photo(current, img, 'lg');
   viewerImg.alt = img.caption;
   viewerText.innerHTML = `${esc(title(current))}: ${esc(img.caption)} (${index + 1}/${current.images.length})<br><span class="credit">${credit(img)}</span>`;
 }
